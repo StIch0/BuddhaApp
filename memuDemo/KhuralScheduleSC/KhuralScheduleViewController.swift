@@ -22,7 +22,6 @@ class KhuralScheduleViewController: UITableViewController,UINavigationBarDelegat
     @IBAction func orderBtn(_ sender: UIButton) {
         performSegue(withIdentifier: "segue", sender: self)
         
-        print (sender.accessibilityIdentifier!)
         
         let indx = (btnDict[sender.accessibilityIdentifier!]?.row)!
         
@@ -106,8 +105,7 @@ class KhuralScheduleViewController: UITableViewController,UINavigationBarDelegat
             
             cntPag = cntPag-1
             
-            print(pagParamDict)
-            
+             
             if (cntPag == -1) {
                 print("  ALL LOADED !!!")
                 allLoaded = true
